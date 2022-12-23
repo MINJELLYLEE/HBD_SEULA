@@ -77,3 +77,16 @@ window.addEventListener("scroll", function (e) {
     }
   });
 });
+
+let num = 0.5;
+document.querySelectorAll("#sec1>.sec1_text>h1").forEach((el) => {
+  // 각 엘리먼트의 animation-delay를 0.5, 1.0, 1.5 ~ 차례로 준다.
+  el.style.setProperty("animation-delay", `${num}s`);
+  num += 1;
+});
+let num1 = 1.5;
+document.querySelectorAll("#sec1>.sec1_text>p").forEach((el) => {
+  // 각 엘리먼트의 animation-delay를 0.5, 1.0, 1.5 ~ 차례로 준다.
+  el.style.setProperty("animation-delay", `${num1}s`);
+  num1 += 4.5;
+});
