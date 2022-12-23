@@ -1,0 +1,150 @@
+@charset "utf-8";
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  font-family: "OTWelcomeRA";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  --bg: #fffafa;
+  --main1: #386f4e;
+  --main2: #c90000;
+  --font1: #414141;
+}
+.wrap {
+  overflow: hidden;
+}
+.mw {
+  max-width: 1400px;
+  margin: auto;
+  width: calc(100% - 2rem);
+}
+body {
+  background-color: var(--bg);
+}
+.goback {
+  font-family: "Cafe24ClassicType-Regular";
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  text-align: center;
+  color: var(--bg);
+  text-shadow: 2px 1px #414141;
+}
+.goback::before {
+  content: "";
+  position: absolute;
+  background: url(../img/돌아가기.png);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  top: -10vh;
+  left: -7vw;
+  transition: 0.3s;
+}
+.goback:hover::before {
+  transform: rotate(-10deg);
+}
+/* sec start */
+section {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 100vh;
+}
+section .about h1 {
+  font-family: "Cafe24ClassicType-Regular";
+
+  font-size: 40px;
+  padding-top: 3rem;
+  text-align: center;
+}
+.photo {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.photo > div {
+  margin: 1rem;
+}
+.photo img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+}
+.dec {
+  font-size: 25px;
+  /* border: 1px solid red; */
+  padding-left: 10%;
+  padding-top: 2rem;
+  position: relative;
+}
+.dec > p {
+  padding-top: 1rem;
+}
+.dec::before {
+  content: "";
+  position: absolute;
+  background-color: #c90000;
+  opacity: 0.2;
+  width: 90px;
+  height: 30px;
+  bottom: 10px;
+  right: 48.8%;
+  z-index: -1;
+}
+/* sec end */
+
+@media (max-width: 600px) {
+  section {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+  }
+  .photo {
+    flex-direction: column;
+  }
+  .photo img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+  }
+  .dec {
+    font-size: 20px;
+    /* border: 1px solid red; */
+    padding-left: 10%;
+    padding: 0rem 0 2rem 10%;
+    position: relative;
+  }
+  .dec > p {
+    padding-top: 1rem;
+  }
+  .dec::before {
+    content: "";
+    position: absolute;
+    background-color: #c90000;
+    opacity: 0.2;
+    width: 70px;
+    height: 30px;
+    bottom: 38px;
+    right: 36%;
+    z-index: -1;
+  }
+}

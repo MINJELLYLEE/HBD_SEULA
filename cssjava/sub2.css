@@ -4,6 +4,13 @@ html {
 }
 
 @font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "KyoboHandwriting2020A";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff")
     format("woff");
@@ -16,6 +23,10 @@ html {
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
+  --bg: #fffafa;
+  --main1: #386f4e;
+  --main2: #c90000;
+  --font1: #414141;
 }
 .wrap {
   overflow: hidden;
@@ -35,6 +46,32 @@ body {
 }
 .wrap {
   overflow: hidden;
+}
+
+.goback {
+  font-family: "Cafe24ClassicType-Regular";
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  text-align: center;
+  color: var(--bg);
+  text-shadow: 2px 1px #414141;
+}
+.goback::before {
+  content: "";
+  position: absolute;
+  background: url(../img/돌아가기.png);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  top: -10vh;
+  left: -7vw;
+  transition: 0.3s;
+}
+.goback:hover::before {
+  transform: rotate(-10deg);
 }
 
 .section {
@@ -119,4 +156,60 @@ body {
 }
 .con p:nth-of-type(3) {
   width: 40%;
+}
+
+@media (max-width: 600px) {
+  .section::before {
+    z-index: -2;
+    right: 0;
+  }
+  .section::after {
+    display: none;
+  }
+  .section .con {
+    /* border: 1px solid blue; */
+    padding-left: 0%;
+    padding-top: 2rem;
+    position: relative;
+  }
+  .con p:nth-of-type(2) {
+    /* border: 1px solid green; */
+    width: 100%;
+  }
+  .con p:nth-of-type(3) {
+    width: 100%;
+  }
+  .section .title::before {
+    content: "";
+    position: absolute;
+    background: url(../img/쿠키1.png);
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    top: -10%;
+    right: -30%;
+  }
+  .section .con::before {
+    display: none;
+  }
+  .section .title::after {
+    display: none;
+  }
+  .goback {
+    font-size: 15px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-align: center;
+    color: var(--bg);
+    text-shadow: 2px 1px #414141;
+  }
+  .goback::before {
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+    top: -5vh;
+    left: -7vw;
+    transition: 0.3s;
+  }
 }

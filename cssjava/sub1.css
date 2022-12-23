@@ -9,8 +9,15 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  font-family: "Cafe24ClassicType-Regular";
+  font-family: "OTWelcomeRA";
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -32,6 +39,31 @@ html {
 .wrap {
   overflow: hidden;
 }
+.goback {
+  font-family: "Cafe24ClassicType-Regular";
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  text-align: center;
+  color: var(--bg);
+  text-shadow: 2px 1px #414141;
+}
+.goback::before {
+  content: "";
+  position: absolute;
+  background: url(../img/돌아가기.png);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  top: -10vh;
+  left: -7vw;
+  transition: 0.3s;
+}
+.goback:hover::before {
+  transform: rotate(-10deg);
+}
 
 /* sec1 start */
 #sec1 {
@@ -41,6 +73,7 @@ html {
   position: relative;
 }
 #sec1 .title {
+  font-family: "Cafe24ClassicType-Regular";
   text-align: center;
   padding-top: 5rem;
   font-size: 35px;
@@ -58,6 +91,7 @@ html {
   opacity: 0.2;
 }
 .sec1_subtitle h2 {
+  font-family: "Cafe24ClassicType-Regular";
   padding-top: 5rem;
   font-size: 25px;
   color: var(--main1);
@@ -95,6 +129,7 @@ html {
   position: relative;
 }
 .sec2_subtitle h1 {
+  font-family: "Cafe24ClassicType-Regular";
   padding-top: 5rem;
   font-size: 25px;
   color: var(--main1);
@@ -124,6 +159,7 @@ html {
   position: relative;
 }
 .sec3_subtitle h1 {
+  font-family: "Cafe24ClassicType-Regular";
   padding-top: 5rem;
   font-size: 25px;
   color: var(--main1);
@@ -150,6 +186,7 @@ html {
   position: relative;
 }
 .sec4_subtitle h1 {
+  font-family: "Cafe24ClassicType-Regular";
   padding-top: 5rem;
   font-size: 25px;
   color: var(--main1);
@@ -205,5 +242,9 @@ html {
   transform: rotate(35deg);
   bottom: 50%;
   right: -30%;
+  transition: 0.3s;
+}
+.gotop:hover::before {
+  transform: rotate(20deg);
 }
 /* sec4 end */
